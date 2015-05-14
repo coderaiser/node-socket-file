@@ -24,8 +24,8 @@ server.listen(port, ip);
 
 socketFile(socket, {
     prefix: 'edward',
-    root: '/',
-    size: '512000' /* max file size for patch */,
+    root: '/',      /* string or function       */
+    size: '512000'  /* max file size for patch  */,
 });
 ```
 
