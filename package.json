@@ -22,7 +22,7 @@
   "homepage": "https://github.com/coderaiser/node-socket-file",
   "dependencies": {
     "ashify": "~1.0.1",
-    "mellow": "~1.3.0",
+    "mellow": "~2.0.0",
     "patchfile": "~1.0.1"
   }
 }
