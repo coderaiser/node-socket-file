@@ -1,6 +1,6 @@
 {
   "name": "socket-file",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "file processing with help of socket.io",
   "main": "lib/socket-file.js",
   "scripts": {
