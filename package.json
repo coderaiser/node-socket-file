@@ -4,7 +4,14 @@
   "description": "file processing with help of socket.io",
   "main": "lib/socket-file.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test/**/*.js",
+    "watch:test": "nodemon -w test -w lib --exec npm test",
+    "lint": "redrun lint:*",
+    "lint:eslint:client": "eslint --config .eslintrc-client lib --ignore-pattern lib/server",
+    "lint:eslint:server": "eslint lib test --ignore-pattern lib/client.js",
+    "coverage": "nyc npm test",
+    "report": "nyc report --reporter=text-lcov | coveralls",
+    "bower": "bower"
   },
   "repository": {
     "type": "git",
@@ -24,5 +31,15 @@
     "ashify": "~1.0.1",
     "mellow": "~2.0.0",
     "patchfile": "~1.0.1"
+  },
+  "devDependencies": {
+    "bower": "^1.5.2",
+    "eslint": "^3.0.1",
+    "express": "^4.14.0",
+    "freeport": "^1.0.5",
+    "redrun": "^5.0.1",
+    "socket.io": "^1.4.8",
+    "socket.io-client": "^1.4.8",
+    "tape": "^4.6.0"
   }
 }
