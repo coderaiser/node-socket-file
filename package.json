@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "bower": "^1.5.2",
+    "coveralls": "^2.11.11",
     "eslint": "^3.0.1",
     "express": "^4.14.0",
     "freeport": "^1.0.5",
