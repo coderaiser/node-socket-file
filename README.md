@@ -11,7 +11,7 @@ npm i socket-file --save
 ## How to use?
 
 ```js
-var socketFile = require('socket-file'),
+var socketFile  = require('socket-file'),
     
     http        = require('http'),
     express     = require('express'),
