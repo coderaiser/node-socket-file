@@ -1,3 +1,11 @@
+2017.01.12, v1.3.1
+
+feature:
+- (socket-file) add early return
+- (package) coveralls v2.11.11
+- (package) nyc v7.0.0
+
+
 2016.07.14, v1.3.0
 
 feature:
