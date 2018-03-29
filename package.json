@@ -10,8 +10,7 @@
     "lint:eslint:client": "eslint --config .eslintrc-client lib --ignore-pattern lib/server",
     "lint:eslint:server": "eslint lib test --ignore-pattern lib/client.js",
     "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls",
-    "bower": "bower"
+    "report": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -33,7 +32,6 @@
     "patchfile": "~1.0.1"
   },
   "devDependencies": {
-    "bower": "^1.5.2",
     "coveralls": "^2.11.11",
     "eslint": "^3.0.1",
     "express": "^4.14.0",
