@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/coderaiser/node-socket-file",
   "dependencies": {
-    "ashify": "~1.0.1",
-    "mellow": "~2.0.0",
-    "patchfile": "~1.0.1"
+    "ashify": "^1.0.1",
+    "mellow": "^2.0.0",
+    "patchfile": "^1.0.1"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
