@@ -1,3 +1,18 @@
+2018.03.30, v2.0.0
+
+feature:
+- (socket-file) authCheck -> auth
+- (socket-file) es2015-ify
+- (package) dependencies: ~ -> ^
+- (package) nyc v11.6.0
+- (package) socket.io-client v2.0.4
+- (package) socket.io v2.0.4
+- (package) redrun v6.0.1
+- (package) eslint v4.19.1
+- (package) coveralls v3.0.0
+- (package) rm unusede bower
+
+
 2017.01.12, v1.3.1
 
 feature:
