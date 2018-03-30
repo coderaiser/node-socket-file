@@ -11,22 +11,24 @@ npm i socket-file --save
 ## How to use?
 
 ```js
-var socketFile  = require('socket-file'),
-    
-    http        = require('http'),
-    express     = require('express'),
-    io          = require('socket.io'),
-    app         = express(),
-    server      = http.createServer(app);
+const socketFile = require('socket-file');
 
-socket          = io.listen(server),
+const http = require('http');
+const express = require('express');
+const io = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const socket = io.listen(server);
+
 server.listen(port, ip);
 
 socketFile(socket, {
     prefix: 'edward',
     root: '/',      /* string or function       */
     size: '512000', /* max file size for patch  */
-    authCheck: function(socket, success) {
+    auth: (accept, reject) => (username, password) {
+        accept();
     }
 });
 ```

@@ -39,49 +39,39 @@ test('socket-file: options: empty object', (t) => {
     });
 });
 
-test('socket-file: options: authCheck not function', (t) => {
-    const authCheck = {};
+test('socket-file: options: auth not function', (t) => {
+    const auth = {};
     const fn = () => {
-        connect('/', {authCheck}, () => {
+        connect('/', {auth}, () => {
         });
     };
     
-    t.throws(fn, /authCheck should be function!/, 'should throw when authCheck not function');
+    t.throws(fn, /auth should be function!/, 'should throw when auth not function');
     t.end();
 });
 
-test('socket-file: options: authCheck: wrong credentials', (t) => {
-    const authCheck = (socket, fn) => {
-        socket.on('auth', (username, password) => {
-            if (username === 'hello' && password === 'world')
-                fn();
-            else
-                socket.emit('err', 'Wrong credentials');
-        });
+test('socket-file: options: auth: wrong credentials', (t) => {
+    const auth = (accept, reject) => () => {
+        reject();
     };
     
-    connect('/', {authCheck}, (socket, fn) => {
+    connect('/', {auth}, (socket, done) => {
         socket.emit('auth', 'jhon', 'lajoie');
         
-        socket.on('err', (error) => {
-            t.equal(error, 'Wrong credentials', 'should return error');
+        socket.on('reject', () => {
+            t.pass('should reject');
+            done();
             t.end();
-            fn();
         });
     });
 });
 
-test('socket-file: options: authCheck: correct credentials', (t) => {
-    const authCheck = (socket, fn) => {
-        socket.on('auth', (username, password) => {
-            if (username === 'hello' && password === 'world')
-                fn();
-            else
-                socket.emit('err', 'Wrong credentials');
-        });
+test('socket-file: options: auth: correct credentials', (t) => {
+    const auth = (accept) => () => {
+        accept();
     };
     
-    connect('/', {authCheck}, (socket, fn) => {
+    connect('/', {auth}, (socket, fn) => {
         socket.emit('auth', 'hello', 'world');
         
         socket.on('connect', () => {
