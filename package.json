@@ -29,7 +29,7 @@
   "dependencies": {
     "ashify": "^1.0.1",
     "mellow": "^2.0.0",
-    "patchfile": "^1.0.1",
+    "patchfile": "^2.0.0",
     "wraptile": "^2.0.0"
   },
   "devDependencies": {
