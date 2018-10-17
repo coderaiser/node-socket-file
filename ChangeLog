@@ -1,3 +1,10 @@
+2018.10.17, v3.0.0
+
+feature:
+- (socket-file) drop support of node < 8
+- (package) patchfile v2.0.0
+
+
 2018.05.03, v2.0.1
 
 feature:
