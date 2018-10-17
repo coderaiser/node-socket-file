@@ -1,3 +1,12 @@
+2018.10.17, v3.0.2
+
+fix:
+- (socket-file) rm })
+
+feature:
+- (package) redrun v7.0.2
+
+
 2018.10.17, v3.0.1
 
 feature:
