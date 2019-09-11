@@ -30,7 +30,7 @@
     "ashify": "^2.0.1",
     "mellow": "^2.0.0",
     "patchfile": "^2.0.0",
-    "wraptile": "^2.0.0"
+    "wraptile": "^3.0.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
