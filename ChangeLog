@@ -1,3 +1,13 @@
+2019.09.11, v3.1.0
+
+feature:
+- (package) eslint v6.3.0
+- (socket-file) madrun
+- (package) nyc v14.1.1
+- (package) wraptile v3.0.0
+- (package) ashify v2.0.1
+
+
 2018.10.17, v3.0.2
 
 fix:
