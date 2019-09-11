@@ -4,13 +4,14 @@
   "description": "file processing with help of socket.io",
   "main": "lib/socket-file.js",
   "scripts": {
-    "test": "tape test/**/*.js",
-    "watch:test": "nodemon -w test -w lib --exec npm test",
-    "lint": "redrun lint:*",
-    "lint:eslint:client": "eslint --config .eslintrc-client lib --ignore-pattern lib/server",
-    "lint:eslint:server": "eslint lib test --ignore-pattern lib/client.js",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls"
+    "test": "madrun test",
+    "watch:test": "madrun watch:test",
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "lint:eslint:client": "madrun lint:eslint:client",
+    "lint:eslint:server": "madrun lint:eslint:server",
+    "coverage": "madrun coverage",
+    "report": "madrun report"
   },
   "repository": {
     "type": "git",
@@ -35,12 +36,17 @@
   "devDependencies": {
     "coveralls": "^3.0.0",
     "eslint": "^5.7.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-putout": "^2.0.0",
     "express": "^4.14.0",
     "freeport": "^1.0.5",
+    "madrun": "^3.0.3",
     "nyc": "^14.1.1",
+    "putout": "^5.26.0",
     "redrun": "^7.0.2",
     "socket.io": "^2.0.4",
     "socket.io-client": "^2.0.4",
+    "supertape": "^1.2.3",
     "tape": "^4.6.0"
   },
   "engines": {

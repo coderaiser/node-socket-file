@@ -28,7 +28,9 @@ function connect(defaultPrefix, middle, path, options, fn) {
     if (!options || !options.prefix) {
         path = defaultPrefix;
     } else {
-        const prefix = options.prefix || defaultPrefix;
+        const {
+            prefix = defaultPrefix,
+        } = options;
         path = `${prefix}${!path ? '' : '/' + path}`;
     }
     
@@ -36,7 +38,7 @@ function connect(defaultPrefix, middle, path, options, fn) {
     const server = http.createServer(app);
     
     middle(io(server), options);
-        
+    
     freeport((error, port) => {
         const ip = '127.0.0.1';
         
