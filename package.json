@@ -47,7 +47,7 @@
     "eslint-plugin-putout": "^2.0.0",
     "express": "^4.14.0",
     "freeport": "^1.0.5",
-    "madrun": "^3.0.3",
+    "madrun": "^5.4.4",
     "nyc": "^15.0.0",
     "putout": "^7.16.0",
     "redrun": "^7.0.2",
