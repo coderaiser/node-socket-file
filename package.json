@@ -44,7 +44,7 @@
     "coveralls": "^3.0.0",
     "eslint": "^6.3.0",
     "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-putout": "^2.0.0",
+    "eslint-plugin-putout": "^3.2.1",
     "express": "^4.14.0",
     "freeport": "^1.0.5",
     "madrun": "^5.4.4",
