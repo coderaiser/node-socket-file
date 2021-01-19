@@ -27,9 +27,9 @@ socketFile(socket, {
     prefix: 'edward',
     root: '/',      /* string or function       */
     size: '512000', /* max file size for patch  */
-    auth: (accept, reject) => (username, password) {
+    auth: (accept, reject) => (username, password) => {
         accept();
-    }
+    },
 });
 ```
 
@@ -37,12 +37,11 @@ socketFile(socket, {
 
 MIT
 
-[NPMIMGURL]:                https://img.shields.io/npm/v/socket-file.svg?style=flat
-[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/node-socket-file.svg?style=flat
-[LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
-[BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/node-socket-file/master.svg?style=flat
-[NPMURL]:                   https://npmjs.org/package/socket-file "npm"
-[DependencyStatusURL]:      https://david-dm.org/coderaiser/node-socket-file "Dependency Status"
-[LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
-[BuildStatusURL]:           https://travis-ci.org/coderaiser/node-socket-file  "Build Status"
-
+[NPMIMGURL]: https://img.shields.io/npm/v/socket-file.svg?style=flat
+[DependencyStatusIMGURL]: https://img.shields.io/david/coderaiser/node-socket-file.svg?style=flat
+[LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
+[BuildStatusIMGURL]: https://img.shields.io/travis/coderaiser/node-socket-file/master.svg?style=flat
+[NPMURL]: https://npmjs.org/package/socket-file "npm"
+[DependencyStatusURL]: https://david-dm.org/coderaiser/node-socket-file "Dependency Status"
+[LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
+[BuildStatusURL]: https://travis-ci.org/coderaiser/node-socket-file "Build Status"

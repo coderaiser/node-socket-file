@@ -13,12 +13,6 @@
     "coverage": "madrun coverage",
     "report": "madrun report"
   },
-  "nyc": {
-    "exclude": [
-      "**/*.spec.js",
-      "test"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/coderaiser/node-socket-file.git"
@@ -52,9 +46,10 @@
     "putout": "^13.7.1",
     "socket.io": "^3.1.0",
     "socket.io-client": "^3.1.0",
-    "supertape": "^4.7.0"
+    "supertape": "^4.7.0",
+    "try-catch": "^3.0.0"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=14"
   }
 }

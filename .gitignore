@@ -1,4 +1,7 @@
+*.swp
+.nyc_output
+.putoutcache
+
 node_modules
 npm-debug.log
-.nyc_output
-
+yarn-error.log

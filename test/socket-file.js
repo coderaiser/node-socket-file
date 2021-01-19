@@ -1,5 +1,7 @@
 'use strict';
 
+const tryCatch = require('try-catch');
+
 const test = require('supertape');
 const socketFile = require('..');
 const connect = require('./connect')('socket-file', socketFile);
@@ -46,7 +48,9 @@ test('socket-file: options: auth not function', (t) => {
         });
     };
     
-    t.throws(fn, /auth should be function!/, 'should throw when auth not function');
+    const [error] = tryCatch(fn);
+    
+    t.equal(error.message, 'auth should be function!', 'should throw when auth not function');
     t.end();
 });
 
