@@ -1,3 +1,16 @@
+2021.01.19, v5.0.0
+
+feature:
+- (socket-file) drop support of node < 14
+- (package) eslint-plugin-putout v6.11.1
+- (package) eslint v7.18.0
+- (package) madrun v8.6.0
+- (package) putout v13.7.1
+- (package) socket.io v3.1.0
+- (package) socket.io-client v3.1.0
+- (package) supertape v4.7.0
+
+
 2020.02.29, v4.0.0
 
 feature:
