@@ -6,10 +6,8 @@ const freeport = require('freeport');
 const io = require('socket.io');
 const ioClient = require('socket.io-client');
 
-module.exports = (prefix, middle) => {
-    return (path, options, fn) => {
-        connect(prefix, middle, path, options, fn);
-    };
+module.exports = (prefix, middle) => (path, options, fn) => {
+    connect(prefix, middle, path, options, fn);
 };
 
 function connect(defaultPrefix, middle, path, options, fn) {

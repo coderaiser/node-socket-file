@@ -1,8 +1,10 @@
 'use strict';
 
-const tryCatch = require('try-catch');
+const {join} = require('path');
 
+const tryCatch = require('try-catch');
 const test = require('supertape');
+
 const socketFile = require('..');
 const connect = require('./connect')('socket-file', socketFile);
 
@@ -88,5 +90,13 @@ test('socket-file: options: auth: correct credentials', (t) => {
             t.notOk(error, 'should not be error');
         });
     });
+});
+
+test('socket-file: getHash', async (t) => {
+    const fixturePath = join(__dirname, 'fixture', 'hash.zip');
+    const hash = await socketFile.getHash(`${fixturePath}/hello.txt`);
+    
+    t.equal(hash, '22596363b3de40b06f981fb85d82312e8c0ed511');
+    t.end();
 });
 

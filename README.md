@@ -1,4 +1,4 @@
-# Socket-file [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
+# Socket-file [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
 
 File processing with help of [socket.io](http://socket.io "Socket.io").
 
@@ -38,10 +38,8 @@ socketFile(socket, {
 MIT
 
 [NPMIMGURL]: https://img.shields.io/npm/v/socket-file.svg?style=flat
-[DependencyStatusIMGURL]: https://img.shields.io/david/coderaiser/node-socket-file.svg?style=flat
 [LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
 [BuildStatusIMGURL]: https://img.shields.io/travis/coderaiser/node-socket-file/master.svg?style=flat
 [NPMURL]: https://npmjs.org/package/socket-file "npm"
-[DependencyStatusURL]: https://david-dm.org/coderaiser/node-socket-file "Dependency Status"
 [LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
 [BuildStatusURL]: https://travis-ci.org/coderaiser/node-socket-file "Build Status"

@@ -32,9 +32,11 @@
     "mellow": "^3.0.2",
     "patchfile": "^3.0.0",
     "try-to-catch": "^3.0.0",
+    "win32": "^6.0.2",
     "wraptile": "^3.0.0"
   },
   "devDependencies": {
+    "c8": "^7.10.0",
     "coveralls": "^3.0.0",
     "eslint": "^8.4.1",
     "eslint-plugin-node": "^11.0.0",
@@ -42,7 +44,6 @@
     "express": "^4.14.0",
     "freeport": "^1.0.5",
     "madrun": "^8.6.0",
-    "nyc": "^15.0.0",
     "putout": "^22.8.2",
     "socket.io": "^4.4.0",
     "socket.io-client": "^4.4.0",
