@@ -1,3 +1,16 @@
+2021.12.17, v5.1.0
+
+feature:
+- (socket-file) add support of zip files
+- (package) eslint v8.4.1
+- (package) socket.io-client v4.4.0
+- (package) socket.io v4.4.0
+- (package) supertape v6.10.0
+- (package) mellow v3.0.2
+- (package) eslint-plugin-putout v12.7.1
+- (package) putout v22.8.2
+
+
 2021.01.19, v5.0.0
 
 feature:
