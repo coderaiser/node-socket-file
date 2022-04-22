@@ -44,7 +44,7 @@
     "express": "^4.14.0",
     "freeport": "^1.0.5",
     "madrun": "^9.0.2",
-    "putout": "^22.8.2",
+    "putout": "^25.15.0",
     "socket.io": "^4.4.0",
     "socket.io-client": "^4.4.0",
     "supertape": "^7.2.3",
