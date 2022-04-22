@@ -25,7 +25,7 @@ server.listen(port, ip);
 
 socketFile(socket, {
     prefix: 'edward',
-    root: '/',      /* string or function       */
+    root: '/', /* string or function       */
     size: '512000', /* max file size for patch  */
     auth: (accept, reject) => (username, password) => {
         accept();
