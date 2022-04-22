@@ -32,7 +32,7 @@
     "mellow": "^3.0.2",
     "patchfile": "^3.0.0",
     "try-to-catch": "^3.0.0",
-    "win32": "^6.0.2",
+    "win32": "^7.0.0",
     "wraptile": "^3.0.0"
   },
   "devDependencies": {
