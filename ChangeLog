@@ -1,3 +1,14 @@
+2022.04.22, v6.0.0
+
+feature:
+- (package) putout v25.15.0
+- (socket-file) drop support of node < 16
+- (package) supertape v7.2.3
+- (package) eslint-plugin-putout v14.11.0
+- (package) madrun v9.0.2
+- (package) win32 v7.0.0
+
+
 2021.12.17, v5.1.1
 
 feature:
