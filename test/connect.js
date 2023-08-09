@@ -1,14 +1,15 @@
 'use strict';
 
+const {promisify} = require('util');
 const http = require('http');
 const express = require('express');
 const freeport = require('freeport');
 const io = require('socket.io');
 const ioClient = require('socket.io-client');
 
-module.exports = (prefix, middle) => (path, options, fn) => {
+module.exports = (prefix, middle) => promisify((path, options, fn) => {
     connect(prefix, middle, path, options, fn);
-};
+});
 
 function connect(defaultPrefix, middle, path, options, fn) {
     if (!path) {
@@ -26,9 +27,8 @@ function connect(defaultPrefix, middle, path, options, fn) {
     if (!options || !options.prefix) {
         path = defaultPrefix;
     } else {
-        const {
-            prefix = defaultPrefix,
-        } = options;
+        const {prefix = defaultPrefix} = options;
+        
         path = `${prefix}${!path ? '' : '/' + path}`;
     }
     
@@ -47,7 +47,7 @@ function connect(defaultPrefix, middle, path, options, fn) {
             const url = `http://127.0.0.1:${port}/${path}`;
             const socket = ioClient(url);
             
-            fn(socket, () => {
+            fn(null, socket, () => {
                 socket.destroy();
                 server.close();
             });
