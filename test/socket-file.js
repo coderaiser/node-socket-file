@@ -3,7 +3,6 @@
 const {join} = require('path');
 const {once} = require('events');
 
-const tryCatch = require('try-catch');
 const tryToCatch = require('try-to-catch');
 const test = require('supertape');
 
@@ -11,7 +10,9 @@ const socketFile = require('..');
 const connect = require('./connect')('socket-file', socketFile);
 
 test('socket-file: options: prefix', async (t) => {
-    const socket = await connect('/', {prefix: 'hello'});
+    const socket = await connect('/', {
+        prefix: 'hello',
+    });
     await once(socket, 'connect');
     
     t.pass('connected with prefix');
@@ -19,13 +20,15 @@ test('socket-file: options: prefix', async (t) => {
 });
 
 test('socket-file: options: root', async (t) => {
-    const socket = await connect('/', {root: __dirname});
+    const socket = await connect('/', {
+        root: __dirname,
+    });
     await once(socket, 'connect');
     const name = String(Math.random());
     
     socket.emit('patch', name, 'hello world');
     
-    const [error] = await once(socket,'err');
+    const [error] = await once(socket, 'err');
     
     t.ok(error);
     t.end();
@@ -41,7 +44,9 @@ test('socket-file: options: empty object', async (t) => {
 
 test('socket-file: options: auth not function', async (t) => {
     const auth = {};
-    const [error] = await tryToCatch(connect, '/', {auth});
+    const [error] = await tryToCatch(connect, '/', {
+        auth,
+    });
     
     t.equal(error.message, 'auth should be function!', 'should throw when auth not function');
     t.end();
@@ -52,7 +57,9 @@ test('socket-file: options: auth: wrong credentials', async (t) => {
         reject();
     };
     
-    const socket = await connect('/', {auth});
+    const socket = await connect('/', {
+        auth,
+    });
     socket.emit('auth', 'jhon', 'lajoie');
     
     await once(socket, 'reject');
@@ -66,9 +73,11 @@ test('socket-file: options: auth: correct credentials', async (t) => {
         accept();
     };
     
-    const socket = await connect('/', {auth});
+    const socket = await connect('/', {
+        auth,
+    });
     socket.emit('auth', 'hello', 'world');
-        
+    
     await once(socket, 'connect');
     
     t.pass('should grant access');
