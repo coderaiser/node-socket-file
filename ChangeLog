@@ -1,3 +1,13 @@
+2024.03.06, v7.0.0
+
+feature:
+- 64ba54a socket-file: drop support of node < 18
+- 3786b79 socket-file: eslint-plugin-putout v22.4.1
+- 551fab6 socket-file: madrun v10.0.1
+- aa9cbc6 socket-file: putout v35.6.0
+- 150db56 socket-file: supertape v10.3.0
+- 7d4a579 socket-file: c8 v9.1.0
+
 2023.08.09, v6.1.0
 
 feature:
