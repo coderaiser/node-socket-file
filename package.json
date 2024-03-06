@@ -43,7 +43,7 @@
     "eslint-plugin-putout": "^19.0.3",
     "express": "^4.14.0",
     "freeport": "^1.0.5",
-    "madrun": "^9.0.2",
+    "madrun": "^10.0.1",
     "putout": "^35.6.0",
     "socket.io": "^4.4.0",
     "socket.io-client": "^4.4.0",
