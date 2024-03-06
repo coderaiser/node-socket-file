@@ -47,7 +47,7 @@
     "putout": "^31.0.5",
     "socket.io": "^4.4.0",
     "socket.io-client": "^4.4.0",
-    "supertape": "^8.4.1",
+    "supertape": "^10.3.0",
     "try-catch": "^3.0.0"
   },
   "engines": {
