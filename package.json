@@ -31,7 +31,7 @@
   "dependencies": {
     "ashify": "^2.0.1",
     "mellow": "^3.0.2",
-    "patchfile": "^4.0.0",
+    "patchfile": "^5.0.0",
     "try-to-catch": "^3.0.0",
     "win32": "^7.0.0",
     "wraptile": "^3.0.0"
