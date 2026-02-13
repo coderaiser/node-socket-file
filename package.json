@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/coderaiser/node-socket-file.git"
+    "url": "git+https://github.com/coderaiser/node-socket-file.git"
   },
   "keywords": [
     "socket",
@@ -51,6 +51,6 @@
     "try-catch": "^4.0.9"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   }
 }
