@@ -1,10 +1,10 @@
 'use strict';
 
-const {join} = require('path');
-const {once} = require('events');
+const {join} = require('node:path');
+const {once} = require('node:events');
 
-const tryToCatch = require('try-to-catch');
-const test = require('supertape');
+const {tryToCatch} = require('try-to-catch');
+const {test} = require('supertape');
 
 const socketFile = require('..');
 const connect = require('./connect')('socket-file', socketFile);
@@ -13,6 +13,7 @@ test('socket-file: options: prefix', async (t) => {
     const socket = await connect('/', {
         prefix: 'hello',
     });
+    
     await once(socket, 'connect');
     
     t.pass('connected with prefix');
@@ -23,6 +24,7 @@ test('socket-file: options: root', async (t) => {
     const socket = await connect('/', {
         root: __dirname,
     });
+    
     await once(socket, 'connect');
     const name = String(Math.random());
     
@@ -60,6 +62,7 @@ test('socket-file: options: auth: wrong credentials', async (t) => {
     const socket = await connect('/', {
         auth,
     });
+    
     socket.emit('auth', 'jhon', 'lajoie');
     
     await once(socket, 'reject');
@@ -76,6 +79,7 @@ test('socket-file: options: auth: correct credentials', async (t) => {
     const socket = await connect('/', {
         auth,
     });
+    
     socket.emit('auth', 'hello', 'world');
     
     await once(socket, 'connect');

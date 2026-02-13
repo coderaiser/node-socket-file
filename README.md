@@ -18,9 +18,9 @@ npm i socket-file --save
 ## How to use?
 
 ```js
+const http = require('node:http');
 const socketFile = require('socket-file');
 
-const http = require('http');
 const express = require('express');
 const io = require('socket.io');
 

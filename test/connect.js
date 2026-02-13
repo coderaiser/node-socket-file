@@ -1,7 +1,7 @@
 'use strict';
 
-const {promisify} = require('util');
-const http = require('http');
+const {promisify} = require('node:util');
+const http = require('node:http');
 const express = require('express');
 const freeport = require('freeport');
 const io = require('socket.io');
@@ -27,7 +27,9 @@ function connect(defaultPrefix, middle, path, options, fn) {
     if (!options || !options.prefix) {
         path = defaultPrefix;
     } else {
-        const {prefix = defaultPrefix} = options;
+        const {
+            prefix = defaultPrefix,
+        } = options;
         
         path = `${prefix}${!path ? '' : '/' + path}`;
     }
