@@ -20,7 +20,6 @@ npm i socket-file --save
 ```js
 import http from 'node:http';
 import {socketFile} from 'socket-file';
-
 import express from 'express';
 import {Server} from 'socket.io';
 
