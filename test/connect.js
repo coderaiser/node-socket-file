@@ -1,13 +1,11 @@
-'use strict';
+import {promisify} from 'node:util';
+import http from 'node:http';
+import express from 'express';
+import freeport from 'freeport';
+import {Server} from 'socket.io';
+import ioClient from 'socket.io-client';
 
-const {promisify} = require('node:util');
-const http = require('node:http');
-const express = require('express');
-const freeport = require('freeport');
-const io = require('socket.io');
-const ioClient = require('socket.io-client');
-
-module.exports = (prefix, middle) => promisify((path, options, fn) => {
+export default (prefix, middle) => promisify((path, options, fn) => {
     connect(prefix, middle, path, options, fn);
 });
 
@@ -37,7 +35,7 @@ function connect(defaultPrefix, middle, path, options, fn) {
     const app = express();
     const server = http.createServer(app);
     
-    middle(io(server), options);
+    middle(new Server(server), options);
     
     freeport((error, port) => {
         const ip = '127.0.0.1';

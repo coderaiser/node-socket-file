@@ -1,13 +1,14 @@
-'use strict';
+import {join, dirname} from 'node:path';
+import {once} from 'node:events';
+import {fileURLToPath} from 'node:url';
+import {tryToCatch} from 'try-to-catch';
+import {test} from 'supertape';
+import {socketFile, getHash} from '../lib/socket-file.js';
+import Connect from './connect.js';
 
-const {join} = require('node:path');
-const {once} = require('node:events');
-
-const {tryToCatch} = require('try-to-catch');
-const {test} = require('supertape');
-
-const socketFile = require('..');
-const connect = require('./connect')('socket-file', socketFile);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const connect = Connect('socket-file', socketFile);
 
 test('socket-file: options: prefix', async (t) => {
     const socket = await connect('/', {
@@ -90,7 +91,7 @@ test('socket-file: options: auth: correct credentials', async (t) => {
 
 test('socket-file: getHash', async (t) => {
     const fixturePath = join(__dirname, 'fixture', 'hash.zip');
-    const hash = await socketFile.getHash(`${fixturePath}/hello.txt`);
+    const hash = await getHash(`${fixturePath}/hello.txt`);
     
     t.equal(hash, '22596363b3de40b06f981fb85d82312e8c0ed511');
     t.end();
