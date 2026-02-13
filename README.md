@@ -18,15 +18,15 @@ npm i socket-file --save
 ## How to use?
 
 ```js
-const http = require('node:http');
-const socketFile = require('socket-file');
+import http from 'node:http';
+import {socketFile} from 'socket-file';
 
-const express = require('express');
-const io = require('socket.io');
+import express from 'express';
+import {Server} from 'socket.io';
 
 const app = express();
 const server = http.createServer(app);
-const socket = io.listen(server);
+const socket = new Server(server);
 
 server.listen(port, ip);
 
